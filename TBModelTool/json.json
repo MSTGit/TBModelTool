@@ -1,0 +1,68 @@
+{
+  "NumberTest" : 999,
+  "amount" : "50",
+  "boolTest" : true,
+  "commonAttachmentList" : [
+    {
+      "_Arr" : [
+        {
+          "_Key1" : "_Value1",
+          "_Key2" : "_Value2",
+          "_Key3" : "_Value3",
+          "id" : "123"
+        }
+      ],
+      "a" : "aa"
+    },
+    {
+      "_Arr" : [
+        {
+          "_Key1" : "_Value1",
+          "_Key2" : "_Value2",
+          "_Key3" : "_Value3",
+          "iiid" : "1111"
+        }
+      ],
+      "a" : "aa"
+    },
+    {
+      "_Arr" : [
+        {
+          "_Key1" : "_Value1",
+          "_Key2" : "_Value2",
+          "_Key3" : "_Value3"
+        }
+      ],
+      "a" : "aa"
+    }
+  ],
+  "costCategory" : "财务费用",
+  "costType" : "3003",
+  "costTypeName" : "财务部杂费用",
+  "dictTest" : {
+    "key1" : "value1",
+    "key2" : "value2"
+  },
+  "diffAmount" : "50",
+  "empId" : "CW0012",
+  "empName" : "农岚",
+  "id" : "BX1701200015",
+  "orderDate" : "2017-01-20",
+  "orderMonth" : "1",
+  "orderType" : "10",
+  "orderTypeName" : "费用申请单",
+  "orderYear" : "2017",
+  "orgId" : "C6",
+  "orgName" : "财务部",
+  "relBudgetName" : "2017年1月财务类月度费用预算表",
+  "relOrderNo" : "YS1701190002",
+  "relOrderType" : "40",
+  "relOrderTypeName" : "市场费用预算",
+  "remainingBudget" : "2900",
+  "remark" : "财务部杂费   注：2017.1.6财务打印机4012碳粉50元，现金付梁莉",
+  "statusId" : "10",
+  "statusName" : "制单",
+  "usedBudget" : "0",
+  "verAmount" : "0",
+  "verificatingAmount" : "0"
+}

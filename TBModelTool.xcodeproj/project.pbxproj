@@ -1,0 +1,721 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67FEFB101E558252009E485F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB0F1E558252009E485F /* main.m */; };
+		67FEFB131E558252009E485F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB121E558252009E485F /* AppDelegate.m */; };
+		67FEFB161E558252009E485F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB151E558252009E485F /* ViewController.m */; };
+		67FEFB191E558252009E485F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FEFB171E558252009E485F /* Main.storyboard */; };
+		67FEFB1B1E558252009E485F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FEFB1A1E558252009E485F /* Assets.xcassets */; };
+		67FEFB1E1E558252009E485F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67FEFB1C1E558252009E485F /* LaunchScreen.storyboard */; };
+		67FEFB291E558252009E485F /* TBModelToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB281E558252009E485F /* TBModelToolTests.m */; };
+		67FEFB341E558252009E485F /* TBModelToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB331E558252009E485F /* TBModelToolUITests.m */; };
+		67FEFB611E558268009E485F /* json.json in Resources */ = {isa = PBXBuildFile; fileRef = 67FEFB411E558268009E485F /* json.json */; };
+		67FEFB621E558268009E485F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67FEFB431E558268009E485F /* Info.plist */; };
+		67FEFB631E558268009E485F /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB461E558268009E485F /* MJExtensionConst.m */; };
+		67FEFB641E558268009E485F /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB481E558268009E485F /* MJFoundation.m */; };
+		67FEFB651E558268009E485F /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB4A1E558268009E485F /* MJProperty.m */; };
+		67FEFB661E558268009E485F /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB4C1E558268009E485F /* MJPropertyKey.m */; };
+		67FEFB671E558268009E485F /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB4E1E558268009E485F /* MJPropertyType.m */; };
+		67FEFB681E558268009E485F /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB501E558268009E485F /* NSObject+MJClass.m */; };
+		67FEFB691E558268009E485F /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB521E558268009E485F /* NSObject+MJCoding.m */; };
+		67FEFB6A1E558268009E485F /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB541E558268009E485F /* NSObject+MJKeyValue.m */; };
+		67FEFB6B1E558268009E485F /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB561E558268009E485F /* NSObject+MJProperty.m */; };
+		67FEFB6C1E558268009E485F /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB581E558268009E485F /* NSString+MJExtension.m */; };
+		67FEFB6D1E558268009E485F /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB5B1E558268009E485F /* NSObject+YYModel.m */; };
+		67FEFB6E1E558268009E485F /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB5D1E558268009E485F /* YYClassInfo.m */; };
+		67FEFB731E558306009E485F /* TBModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB721E558306009E485F /* TBModelTool.m */; };
+		67FEFB8C1E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB751E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.m */; };
+		67FEFB8D1E5583B2009E485F /* TBKVCCommonattachmentlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB771E5583B2009E485F /* TBKVCCommonattachmentlistModel.m */; };
+		67FEFB8E1E5583B2009E485F /* TBKVCDicttestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB791E5583B2009E485F /* TBKVCDicttestModel.m */; };
+		67FEFB8F1E5583B2009E485F /* TBKVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB7B1E5583B2009E485F /* TBKVCModel.m */; };
+		67FEFB901E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB7D1E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.m */; };
+		67FEFB911E5583B2009E485F /* TBMJKitCommonattachmentlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB7F1E5583B2009E485F /* TBMJKitCommonattachmentlistModel.m */; };
+		67FEFB921E5583B2009E485F /* TBMJKitDicttestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB811E5583B2009E485F /* TBMJKitDicttestModel.m */; };
+		67FEFB931E5583B2009E485F /* TBMJKitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB831E5583B2009E485F /* TBMJKitModel.m */; };
+		67FEFB941E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB851E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.m */; };
+		67FEFB951E5583B2009E485F /* TBYYCommonattachmentlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB871E5583B2009E485F /* TBYYCommonattachmentlistModel.m */; };
+		67FEFB961E5583B2009E485F /* TBYYDicttestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB891E5583B2009E485F /* TBYYDicttestModel.m */; };
+		67FEFB971E5583B2009E485F /* TBYYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB8B1E5583B2009E485F /* TBYYModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67FEFB251E558252009E485F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67FEFB031E558252009E485F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67FEFB0A1E558252009E485F;
+			remoteInfo = TBModelTool;
+		};
+		67FEFB301E558252009E485F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67FEFB031E558252009E485F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67FEFB0A1E558252009E485F;
+			remoteInfo = TBModelTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67FEFB0B1E558252009E485F /* TBModelTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBModelTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FEFB0F1E558252009E485F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67FEFB111E558252009E485F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		67FEFB121E558252009E485F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		67FEFB141E558252009E485F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		67FEFB151E558252009E485F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		67FEFB181E558252009E485F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67FEFB1A1E558252009E485F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67FEFB1D1E558252009E485F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67FEFB1F1E558252009E485F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67FEFB241E558252009E485F /* TBModelToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBModelToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FEFB281E558252009E485F /* TBModelToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBModelToolTests.m; sourceTree = "<group>"; };
+		67FEFB2A1E558252009E485F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67FEFB2F1E558252009E485F /* TBModelToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBModelToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FEFB331E558252009E485F /* TBModelToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBModelToolUITests.m; sourceTree = "<group>"; };
+		67FEFB351E558252009E485F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67FEFB411E558268009E485F /* json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = json.json; sourceTree = "<group>"; };
+		67FEFB431E558268009E485F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67FEFB441E558268009E485F /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		67FEFB451E558268009E485F /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		67FEFB461E558268009E485F /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		67FEFB471E558268009E485F /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		67FEFB481E558268009E485F /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		67FEFB491E558268009E485F /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		67FEFB4A1E558268009E485F /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		67FEFB4B1E558268009E485F /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		67FEFB4C1E558268009E485F /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		67FEFB4D1E558268009E485F /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		67FEFB4E1E558268009E485F /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		67FEFB4F1E558268009E485F /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		67FEFB501E558268009E485F /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		67FEFB511E558268009E485F /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		67FEFB521E558268009E485F /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		67FEFB531E558268009E485F /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		67FEFB541E558268009E485F /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		67FEFB551E558268009E485F /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		67FEFB561E558268009E485F /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		67FEFB571E558268009E485F /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		67FEFB581E558268009E485F /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		67FEFB5A1E558268009E485F /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		67FEFB5B1E558268009E485F /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		67FEFB5C1E558268009E485F /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		67FEFB5D1E558268009E485F /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		67FEFB711E558306009E485F /* TBModelTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBModelTool.h; sourceTree = "<group>"; };
+		67FEFB721E558306009E485F /* TBModelTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBModelTool.m; sourceTree = "<group>"; };
+		67FEFB741E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBKVCCommonattachmentlist_ArrModel.h; sourceTree = "<group>"; };
+		67FEFB751E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKVCCommonattachmentlist_ArrModel.m; sourceTree = "<group>"; };
+		67FEFB761E5583B2009E485F /* TBKVCCommonattachmentlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBKVCCommonattachmentlistModel.h; sourceTree = "<group>"; };
+		67FEFB771E5583B2009E485F /* TBKVCCommonattachmentlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKVCCommonattachmentlistModel.m; sourceTree = "<group>"; };
+		67FEFB781E5583B2009E485F /* TBKVCDicttestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBKVCDicttestModel.h; sourceTree = "<group>"; };
+		67FEFB791E5583B2009E485F /* TBKVCDicttestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKVCDicttestModel.m; sourceTree = "<group>"; };
+		67FEFB7A1E5583B2009E485F /* TBKVCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBKVCModel.h; sourceTree = "<group>"; };
+		67FEFB7B1E5583B2009E485F /* TBKVCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKVCModel.m; sourceTree = "<group>"; };
+		67FEFB7C1E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMJKitCommonattachmentlist_ArrModel.h; sourceTree = "<group>"; };
+		67FEFB7D1E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMJKitCommonattachmentlist_ArrModel.m; sourceTree = "<group>"; };
+		67FEFB7E1E5583B2009E485F /* TBMJKitCommonattachmentlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMJKitCommonattachmentlistModel.h; sourceTree = "<group>"; };
+		67FEFB7F1E5583B2009E485F /* TBMJKitCommonattachmentlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMJKitCommonattachmentlistModel.m; sourceTree = "<group>"; };
+		67FEFB801E5583B2009E485F /* TBMJKitDicttestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMJKitDicttestModel.h; sourceTree = "<group>"; };
+		67FEFB811E5583B2009E485F /* TBMJKitDicttestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMJKitDicttestModel.m; sourceTree = "<group>"; };
+		67FEFB821E5583B2009E485F /* TBMJKitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMJKitModel.h; sourceTree = "<group>"; };
+		67FEFB831E5583B2009E485F /* TBMJKitModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMJKitModel.m; sourceTree = "<group>"; };
+		67FEFB841E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBYYCommonattachmentlist_ArrModel.h; sourceTree = "<group>"; };
+		67FEFB851E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBYYCommonattachmentlist_ArrModel.m; sourceTree = "<group>"; };
+		67FEFB861E5583B2009E485F /* TBYYCommonattachmentlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBYYCommonattachmentlistModel.h; sourceTree = "<group>"; };
+		67FEFB871E5583B2009E485F /* TBYYCommonattachmentlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBYYCommonattachmentlistModel.m; sourceTree = "<group>"; };
+		67FEFB881E5583B2009E485F /* TBYYDicttestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBYYDicttestModel.h; sourceTree = "<group>"; };
+		67FEFB891E5583B2009E485F /* TBYYDicttestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBYYDicttestModel.m; sourceTree = "<group>"; };
+		67FEFB8A1E5583B2009E485F /* TBYYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBYYModel.h; sourceTree = "<group>"; };
+		67FEFB8B1E5583B2009E485F /* TBYYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBYYModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67FEFB081E558252009E485F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FEFB211E558252009E485F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FEFB2C1E558252009E485F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67FEFB021E558252009E485F = {
+			isa = PBXGroup;
+			children = (
+				67FEFB0D1E558252009E485F /* TBModelTool */,
+				67FEFB271E558252009E485F /* TBModelToolTests */,
+				67FEFB321E558252009E485F /* TBModelToolUITests */,
+				67FEFB0C1E558252009E485F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67FEFB0C1E558252009E485F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67FEFB0B1E558252009E485F /* TBModelTool.app */,
+				67FEFB241E558252009E485F /* TBModelToolTests.xctest */,
+				67FEFB2F1E558252009E485F /* TBModelToolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67FEFB0D1E558252009E485F /* TBModelTool */ = {
+			isa = PBXGroup;
+			children = (
+				67FEFB741E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.h */,
+				67FEFB751E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.m */,
+				67FEFB761E5583B2009E485F /* TBKVCCommonattachmentlistModel.h */,
+				67FEFB771E5583B2009E485F /* TBKVCCommonattachmentlistModel.m */,
+				67FEFB781E5583B2009E485F /* TBKVCDicttestModel.h */,
+				67FEFB791E5583B2009E485F /* TBKVCDicttestModel.m */,
+				67FEFB7A1E5583B2009E485F /* TBKVCModel.h */,
+				67FEFB7B1E5583B2009E485F /* TBKVCModel.m */,
+				67FEFB7C1E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.h */,
+				67FEFB7D1E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.m */,
+				67FEFB7E1E5583B2009E485F /* TBMJKitCommonattachmentlistModel.h */,
+				67FEFB7F1E5583B2009E485F /* TBMJKitCommonattachmentlistModel.m */,
+				67FEFB801E5583B2009E485F /* TBMJKitDicttestModel.h */,
+				67FEFB811E5583B2009E485F /* TBMJKitDicttestModel.m */,
+				67FEFB821E5583B2009E485F /* TBMJKitModel.h */,
+				67FEFB831E5583B2009E485F /* TBMJKitModel.m */,
+				67FEFB841E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.h */,
+				67FEFB851E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.m */,
+				67FEFB861E5583B2009E485F /* TBYYCommonattachmentlistModel.h */,
+				67FEFB871E5583B2009E485F /* TBYYCommonattachmentlistModel.m */,
+				67FEFB881E5583B2009E485F /* TBYYDicttestModel.h */,
+				67FEFB891E5583B2009E485F /* TBYYDicttestModel.m */,
+				67FEFB8A1E5583B2009E485F /* TBYYModel.h */,
+				67FEFB8B1E5583B2009E485F /* TBYYModel.m */,
+				67FEFB411E558268009E485F /* json.json */,
+				67FEFB701E558306009E485F /* TBModelTool */,
+				67FEFB421E558268009E485F /* MJExtension */,
+				67FEFB591E558268009E485F /* Model */,
+				67FEFB111E558252009E485F /* AppDelegate.h */,
+				67FEFB121E558252009E485F /* AppDelegate.m */,
+				67FEFB141E558252009E485F /* ViewController.h */,
+				67FEFB151E558252009E485F /* ViewController.m */,
+				67FEFB171E558252009E485F /* Main.storyboard */,
+				67FEFB1A1E558252009E485F /* Assets.xcassets */,
+				67FEFB1C1E558252009E485F /* LaunchScreen.storyboard */,
+				67FEFB1F1E558252009E485F /* Info.plist */,
+				67FEFB0E1E558252009E485F /* Supporting Files */,
+			);
+			path = TBModelTool;
+			sourceTree = "<group>";
+		};
+		67FEFB0E1E558252009E485F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67FEFB0F1E558252009E485F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67FEFB271E558252009E485F /* TBModelToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				67FEFB281E558252009E485F /* TBModelToolTests.m */,
+				67FEFB2A1E558252009E485F /* Info.plist */,
+			);
+			path = TBModelToolTests;
+			sourceTree = "<group>";
+		};
+		67FEFB321E558252009E485F /* TBModelToolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				67FEFB331E558252009E485F /* TBModelToolUITests.m */,
+				67FEFB351E558252009E485F /* Info.plist */,
+			);
+			path = TBModelToolUITests;
+			sourceTree = "<group>";
+		};
+		67FEFB421E558268009E485F /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				67FEFB431E558268009E485F /* Info.plist */,
+				67FEFB441E558268009E485F /* MJExtension.h */,
+				67FEFB451E558268009E485F /* MJExtensionConst.h */,
+				67FEFB461E558268009E485F /* MJExtensionConst.m */,
+				67FEFB471E558268009E485F /* MJFoundation.h */,
+				67FEFB481E558268009E485F /* MJFoundation.m */,
+				67FEFB491E558268009E485F /* MJProperty.h */,
+				67FEFB4A1E558268009E485F /* MJProperty.m */,
+				67FEFB4B1E558268009E485F /* MJPropertyKey.h */,
+				67FEFB4C1E558268009E485F /* MJPropertyKey.m */,
+				67FEFB4D1E558268009E485F /* MJPropertyType.h */,
+				67FEFB4E1E558268009E485F /* MJPropertyType.m */,
+				67FEFB4F1E558268009E485F /* NSObject+MJClass.h */,
+				67FEFB501E558268009E485F /* NSObject+MJClass.m */,
+				67FEFB511E558268009E485F /* NSObject+MJCoding.h */,
+				67FEFB521E558268009E485F /* NSObject+MJCoding.m */,
+				67FEFB531E558268009E485F /* NSObject+MJKeyValue.h */,
+				67FEFB541E558268009E485F /* NSObject+MJKeyValue.m */,
+				67FEFB551E558268009E485F /* NSObject+MJProperty.h */,
+				67FEFB561E558268009E485F /* NSObject+MJProperty.m */,
+				67FEFB571E558268009E485F /* NSString+MJExtension.h */,
+				67FEFB581E558268009E485F /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		67FEFB591E558268009E485F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67FEFB5A1E558268009E485F /* NSObject+YYModel.h */,
+				67FEFB5B1E558268009E485F /* NSObject+YYModel.m */,
+				67FEFB5C1E558268009E485F /* YYClassInfo.h */,
+				67FEFB5D1E558268009E485F /* YYClassInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67FEFB701E558306009E485F /* TBModelTool */ = {
+			isa = PBXGroup;
+			children = (
+				67FEFB711E558306009E485F /* TBModelTool.h */,
+				67FEFB721E558306009E485F /* TBModelTool.m */,
+			);
+			path = TBModelTool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67FEFB0A1E558252009E485F /* TBModelTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67FEFB381E558252009E485F /* Build configuration list for PBXNativeTarget "TBModelTool" */;
+			buildPhases = (
+				67FEFB071E558252009E485F /* Sources */,
+				67FEFB081E558252009E485F /* Frameworks */,
+				67FEFB091E558252009E485F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TBModelTool;
+			productName = TBModelTool;
+			productReference = 67FEFB0B1E558252009E485F /* TBModelTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67FEFB231E558252009E485F /* TBModelToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67FEFB3B1E558252009E485F /* Build configuration list for PBXNativeTarget "TBModelToolTests" */;
+			buildPhases = (
+				67FEFB201E558252009E485F /* Sources */,
+				67FEFB211E558252009E485F /* Frameworks */,
+				67FEFB221E558252009E485F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67FEFB261E558252009E485F /* PBXTargetDependency */,
+			);
+			name = TBModelToolTests;
+			productName = TBModelToolTests;
+			productReference = 67FEFB241E558252009E485F /* TBModelToolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		67FEFB2E1E558252009E485F /* TBModelToolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67FEFB3E1E558252009E485F /* Build configuration list for PBXNativeTarget "TBModelToolUITests" */;
+			buildPhases = (
+				67FEFB2B1E558252009E485F /* Sources */,
+				67FEFB2C1E558252009E485F /* Frameworks */,
+				67FEFB2D1E558252009E485F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67FEFB311E558252009E485F /* PBXTargetDependency */,
+			);
+			name = TBModelToolUITests;
+			productName = TBModelToolUITests;
+			productReference = 67FEFB2F1E558252009E485F /* TBModelToolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67FEFB031E558252009E485F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = tangbin;
+				TargetAttributes = {
+					67FEFB0A1E558252009E485F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2Q4XA4B6CU;
+						ProvisioningStyle = Automatic;
+					};
+					67FEFB231E558252009E485F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2Q4XA4B6CU;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 67FEFB0A1E558252009E485F;
+					};
+					67FEFB2E1E558252009E485F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2Q4XA4B6CU;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 67FEFB0A1E558252009E485F;
+					};
+				};
+			};
+			buildConfigurationList = 67FEFB061E558252009E485F /* Build configuration list for PBXProject "TBModelTool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67FEFB021E558252009E485F;
+			productRefGroup = 67FEFB0C1E558252009E485F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67FEFB0A1E558252009E485F /* TBModelTool */,
+				67FEFB231E558252009E485F /* TBModelToolTests */,
+				67FEFB2E1E558252009E485F /* TBModelToolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67FEFB091E558252009E485F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FEFB1E1E558252009E485F /* LaunchScreen.storyboard in Resources */,
+				67FEFB1B1E558252009E485F /* Assets.xcassets in Resources */,
+				67FEFB191E558252009E485F /* Main.storyboard in Resources */,
+				67FEFB621E558268009E485F /* Info.plist in Resources */,
+				67FEFB611E558268009E485F /* json.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FEFB221E558252009E485F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FEFB2D1E558252009E485F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67FEFB071E558252009E485F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FEFB681E558268009E485F /* NSObject+MJClass.m in Sources */,
+				67FEFB8E1E5583B2009E485F /* TBKVCDicttestModel.m in Sources */,
+				67FEFB921E5583B2009E485F /* TBMJKitDicttestModel.m in Sources */,
+				67FEFB971E5583B2009E485F /* TBYYModel.m in Sources */,
+				67FEFB631E558268009E485F /* MJExtensionConst.m in Sources */,
+				67FEFB961E5583B2009E485F /* TBYYDicttestModel.m in Sources */,
+				67FEFB8D1E5583B2009E485F /* TBKVCCommonattachmentlistModel.m in Sources */,
+				67FEFB671E558268009E485F /* MJPropertyType.m in Sources */,
+				67FEFB911E5583B2009E485F /* TBMJKitCommonattachmentlistModel.m in Sources */,
+				67FEFB661E558268009E485F /* MJPropertyKey.m in Sources */,
+				67FEFB941E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.m in Sources */,
+				67FEFB6A1E558268009E485F /* NSObject+MJKeyValue.m in Sources */,
+				67FEFB691E558268009E485F /* NSObject+MJCoding.m in Sources */,
+				67FEFB6C1E558268009E485F /* NSString+MJExtension.m in Sources */,
+				67FEFB651E558268009E485F /* MJProperty.m in Sources */,
+				67FEFB6B1E558268009E485F /* NSObject+MJProperty.m in Sources */,
+				67FEFB6D1E558268009E485F /* NSObject+YYModel.m in Sources */,
+				67FEFB161E558252009E485F /* ViewController.m in Sources */,
+				67FEFB931E5583B2009E485F /* TBMJKitModel.m in Sources */,
+				67FEFB951E5583B2009E485F /* TBYYCommonattachmentlistModel.m in Sources */,
+				67FEFB131E558252009E485F /* AppDelegate.m in Sources */,
+				67FEFB8F1E5583B2009E485F /* TBKVCModel.m in Sources */,
+				67FEFB8C1E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.m in Sources */,
+				67FEFB641E558268009E485F /* MJFoundation.m in Sources */,
+				67FEFB731E558306009E485F /* TBModelTool.m in Sources */,
+				67FEFB6E1E558268009E485F /* YYClassInfo.m in Sources */,
+				67FEFB901E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.m in Sources */,
+				67FEFB101E558252009E485F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FEFB201E558252009E485F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FEFB291E558252009E485F /* TBModelToolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FEFB2B1E558252009E485F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FEFB341E558252009E485F /* TBModelToolUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67FEFB261E558252009E485F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67FEFB0A1E558252009E485F /* TBModelTool */;
+			targetProxy = 67FEFB251E558252009E485F /* PBXContainerItemProxy */;
+		};
+		67FEFB311E558252009E485F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67FEFB0A1E558252009E485F /* TBModelTool */;
+			targetProxy = 67FEFB301E558252009E485F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		67FEFB171E558252009E485F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67FEFB181E558252009E485F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		67FEFB1C1E558252009E485F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67FEFB1D1E558252009E485F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67FEFB361E558252009E485F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		67FEFB371E558252009E485F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67FEFB391E558252009E485F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2Q4XA4B6CU;
+				INFOPLIST_FILE = TBModelTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Posun.TBModelTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		67FEFB3A1E558252009E485F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2Q4XA4B6CU;
+				INFOPLIST_FILE = TBModelTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Posun.TBModelTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		67FEFB3C1E558252009E485F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2Q4XA4B6CU;
+				INFOPLIST_FILE = TBModelToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Posun.TBModelToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TBModelTool.app/TBModelTool";
+			};
+			name = Debug;
+		};
+		67FEFB3D1E558252009E485F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2Q4XA4B6CU;
+				INFOPLIST_FILE = TBModelToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Posun.TBModelToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TBModelTool.app/TBModelTool";
+			};
+			name = Release;
+		};
+		67FEFB3F1E558252009E485F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 2Q4XA4B6CU;
+				INFOPLIST_FILE = TBModelToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Posun.TBModelToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TBModelTool;
+			};
+			name = Debug;
+		};
+		67FEFB401E558252009E485F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 2Q4XA4B6CU;
+				INFOPLIST_FILE = TBModelToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Posun.TBModelToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TBModelTool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67FEFB061E558252009E485F /* Build configuration list for PBXProject "TBModelTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67FEFB361E558252009E485F /* Debug */,
+				67FEFB371E558252009E485F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67FEFB381E558252009E485F /* Build configuration list for PBXNativeTarget "TBModelTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67FEFB391E558252009E485F /* Debug */,
+				67FEFB3A1E558252009E485F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		67FEFB3B1E558252009E485F /* Build configuration list for PBXNativeTarget "TBModelToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67FEFB3C1E558252009E485F /* Debug */,
+				67FEFB3D1E558252009E485F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		67FEFB3E1E558252009E485F /* Build configuration list for PBXNativeTarget "TBModelToolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67FEFB3F1E558252009E485F /* Debug */,
+				67FEFB401E558252009E485F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67FEFB031E558252009E485F /* Project object */;
+}
