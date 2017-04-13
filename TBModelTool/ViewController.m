@@ -6,13 +6,17 @@
 //  Copyright © 2017年 tangbin. All rights reserved.
 //
 
+#define open 0
+
 #import "ViewController.h"
 #import "TBModelTool.h"
 #import "MJExtension.h"
 #import "NSObject+YYModel.h"
-#import "TBKVCModel.h"
-#import "TBMJKitModel.h"
-#import "TBYYModel.h"
+
+//#import "TBKVCModel.h"
+//#import "TBMJKitModel.h"
+//#import "TBYYModel.h"
+
 @interface ViewController ()
 @property (nonatomic,strong) UIScrollView *scrollView;
 
@@ -38,12 +42,15 @@
     [TBModelTool MJ_createModelClassFileWithResource:jsonDic andModelClassFileName:@"TBMJKitModel" andReplacedKeyFromPropertyName:nil];
     
     [TBModelTool YYModel_createModelClassFileWithResource:jsonDic andModelClassFileName:@"TBYYModel" andReplacedKeyFromPropertyName:@{@"amount":@"amountamountamountamount"}];
-    
+#if open
         [self testKVCWithDic:jsonDic];
         [self testMJKitWithDic:jsonDic];
         [self testYYKitWithDic:jsonDic];
+#endif
     
 }
+
+#if open
 
 - (void)testKVCWithDic:(NSDictionary *)dic {
     TBKVCModel *kvcModel = [[TBKVCModel alloc]init];
@@ -61,5 +68,6 @@
     NSLog(@"%@",YYModel);
 }
 
+#endif
 
 @end

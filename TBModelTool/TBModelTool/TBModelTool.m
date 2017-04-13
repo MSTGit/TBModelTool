@@ -50,7 +50,13 @@ static TBModelTool *sInstance;
 + (void)MJ_createModelClassFileWithResource:(id)resource andModelClassFileName:(NSString *)fileName andReplacedKeyFromPropertyName:(NSDictionary *)replacedKeyFromPropertyName{
     [self sharedInstance];
     sInstance->_toolType = ModelToolTypeMJKit;
-    [self createModelClassFileWithResource:resource andModelClassFileName:fileName andReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
+    if ([resource isKindOfClass:[NSArray class]]) {
+        for (NSDictionary *dic in resource) {
+            [self createModelClassFileWithResource:dic andModelClassFileName:fileName andReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
+        }
+    } else{
+        [self createModelClassFileWithResource:resource andModelClassFileName:fileName andReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
+    }
     return;
 }
 
@@ -58,8 +64,14 @@ static TBModelTool *sInstance;
 + (void)KVC_createModelClassFileWithResource:(id)resource andModelClassFileName:(NSString *)fileName andReplacedKeyFromPropertyName:(NSDictionary *)replacedKeyFromPropertyName{
     [self sharedInstance];
     sInstance->_toolType = ModelToolTypeKVC;
-
-    [self createModelClassFileWithResource:resource andModelClassFileName:fileName andReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
+    
+    if ([resource isKindOfClass:[NSArray class]]) {
+        for (NSDictionary *dic in resource) {
+            [self createModelClassFileWithResource:dic andModelClassFileName:fileName andReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
+        }
+    } else{
+        [self createModelClassFileWithResource:resource andModelClassFileName:fileName andReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
+    }
     return;
 }
 
@@ -67,7 +79,13 @@ static TBModelTool *sInstance;
 + (void)YYModel_createModelClassFileWithResource:(id)resource andModelClassFileName:(NSString *)fileName andReplacedKeyFromPropertyName:(NSDictionary *)replacedKeyFromPropertyName {
     [self sharedInstance];
     sInstance->_toolType = ModelToolTypeYYModel;
-    [self createModelClassFileWithResource:resource andModelClassFileName:fileName andReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
+    if ([resource isKindOfClass:[NSArray class]]) {
+        for (NSDictionary *dic in resource) {
+            [self createModelClassFileWithResource:dic andModelClassFileName:fileName andReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
+        }
+    } else{
+        [self createModelClassFileWithResource:resource andModelClassFileName:fileName andReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
+    }
     return;
 }
 
@@ -76,14 +94,34 @@ static TBModelTool *sInstance;
 + (void)createModelClassFileWithResource:(id)resource andModelClassFileName:(NSString *)fileName andReplacedKeyFromPropertyName:(NSDictionary *)replacedKeyFromPropertyName{
     
     NSAssert(fileName != nil && resource != nil, @"源数据或者文件名不能为空！");
-    [self setupReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
-    if ([self fileIsExistWithFileName:fileName]) {
-        return;
+    NSAssert([resource isKindOfClass:[NSDictionary class]], @"json格式不正确");
+    [self modelToolSetupReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
+    NSString *hFileName = [NSString stringWithFormat:@"%@%@.h",[MODEL_FILE_PATH hasSuffix:@"/"] ? MODEL_FILE_PATH : [NSString stringWithFormat:@"%@/",MODEL_FILE_PATH],fileName];
+    NSString *hFileContent = [NSString stringWithContentsOfFile:hFileName encoding:NSUTF8StringEncoding error:nil] ;
+    if ([hFileContent hasSuffix:@"@end"]) {
+        hFileContent = [hFileContent stringByReplacingCharactersInRange:NSMakeRange(hFileContent.length - 4, 4) withString:@""];
     }
+    
+    
+    
     NSMutableString *codes = [NSMutableString string];
     NSMutableString *importString = [NSMutableString string];
     NSMutableString *AnalysisCodeString = [NSMutableString string];
     NSMutableArray *propertyToModelDicStringArr = [NSMutableArray array];
+    
+    NSMutableArray *oldPropertyArr = [NSMutableArray array];
+    if (hFileContent) {
+        NSArray *hFileContentArr = [hFileContent componentsSeparatedByString:@"\n"];
+        for (NSString *string in hFileContentArr) {
+            if ([string containsString:@"#import"]) {
+                if (![importString containsString:string]) {
+                    [importString appendString:[NSString stringWithFormat:@"%@\n",string]];
+                }
+            } else if([string containsString:@"@property"]) {
+                [oldPropertyArr addObject:string];
+            }
+        }
+    }
     
     if (sInstance->_toolType == ModelToolTypeMJKit) {
         
@@ -91,9 +129,12 @@ static TBModelTool *sInstance;
         AnalysisCodeString = [NSMutableString stringWithString:@"- (void)setValue:(id)value forUndefinedKey:(NSString *)key {}\n- (void)setValue:(id)value forKey:(NSString *)key {\n if ([key isEqualToString:@\"id\"]) {\n[super setValue:value forKey:@\"Id\"];\n}  \n  "];
     } else if (sInstance -> _toolType == ModelToolTypeYYModel) {
         AnalysisCodeString = [NSMutableString stringWithString:
-                                 @"+ (NSDictionary *)modelContainerPropertyGenericClass {\
-                                 \n return @{\n\
-                                 "];
+                              @"+ (NSDictionary *)modelContainerPropertyGenericClass {\
+                              \n return @{\n\
+                              "];
+    }
+    if (oldPropertyArr.count) {
+        codes = [[oldPropertyArr componentsJoinedByString:@"\n"] mutableCopy];
     }
     //遍历字典
     [resource enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
@@ -102,27 +143,34 @@ static TBModelTool *sInstance;
         if (theKey) {
             key = theKey;
         }
-        if (sInstance->_addRemarkCode) {
-            NSString *remarkCode = @"/**\n <\#Description\#>\n*/";
-            [codes appendString:remarkCode];
-        }
         if ([obj isKindOfClass:[NSString class]]) {
-            code = [NSString stringWithFormat:@"@property (nonatomic, strong) NSString *%@;", key];
+            NSString *currentPropertyString = [NSString stringWithFormat:@"@property (nonatomic, strong) NSString *%@;", key];
+            if (![codes containsString:currentPropertyString]) {
+                code = currentPropertyString;
+            }
         } else if ([obj isKindOfClass:NSClassFromString(@"__NSCFBoolean")]) {
-            
-            code = [NSString stringWithFormat:@"@property (nonatomic, assign) BOOL %@;", key];
+            NSString *currentPropertyString = [NSString stringWithFormat:@"@property (nonatomic, assign) BOOL %@;", key];
+            if (![codes containsString:currentPropertyString]) {
+                code = currentPropertyString;
+            }
         } else if ([obj isKindOfClass:[NSNumber class]]) {
-            
-            code = [NSString stringWithFormat:@"@property (nonatomic, assign) NSInteger %@;", key];
+            NSString *currentPropertyString = [NSString stringWithFormat:@"@property (nonatomic, assign) NSInteger %@;", key];
+            if (![codes containsString:currentPropertyString]) {
+                code = currentPropertyString;
+            }
         } else if ([obj isKindOfClass:[NSArray class]]) {
-            code = [NSString stringWithFormat:@"@property (nonatomic, strong) NSArray *%@;", key];
-             NSString *currentModelName = [NSString stringWithFormat:@"%@%@Model",[fileName stringByReplacingOccurrencesOfString:@"Model" withString:@""],[key capitalizedString]];
+            NSString *currentPropertyString = [NSString stringWithFormat:@"@property (nonatomic, strong) NSArray *%@;", key];
+            NSString *currentModelName = [NSString stringWithFormat:@"%@%@Model",[fileName stringByReplacingOccurrencesOfString:@"Model" withString:@""],[key capitalizedString]];
+            
+            if (![codes containsString:currentPropertyString]) {
+                code = currentPropertyString;
+                [importString appendString:[NSString stringWithFormat:@"#import \"%@.h\" \n",currentModelName]];
+            }
             for (id currentObj in obj) {
                 if ([currentObj isKindOfClass:[NSDictionary class]]) {
                     [self createModelClassFileWithResource:currentObj andModelClassFileName:currentModelName andReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
                 }
             }
-            [importString appendString:[NSString stringWithFormat:@"#import \"%@.h\" \n",currentModelName]];
             if (sInstance->_toolType == ModelToolTypeMJKit) {
                 [propertyToModelDicStringArr addObject:[NSString stringWithFormat:@"@\"%@\":@\"%@\"",key,currentModelName]];
             } else if (sInstance->_toolType == ModelToolTypeKVC) {
@@ -132,14 +180,18 @@ static TBModelTool *sInstance;
                 NSString *arrayPropertyAnalysisCodeString = [NSString stringWithFormat:@"@\"%@\":%@.class,",key,currentModelName];
                 [AnalysisCodeString appendString:arrayPropertyAnalysisCodeString];
             }
-
+            
         } else if ([obj isKindOfClass:[NSDictionary class]]) {
             NSString *currentModelName = [NSString stringWithFormat:@"%@%@Model",[fileName stringByReplacingOccurrencesOfString:@"Model" withString:@""],[key capitalizedString]];
-            code = [NSString stringWithFormat:@"@property (nonatomic, strong) %@ *%@;",currentModelName, key];
             
+            NSString *currentPropertyString = [NSString stringWithFormat:@"@property (nonatomic, strong) %@ *%@;",currentModelName, key];
+            if (![codes containsString:currentPropertyString]) {
+                code = currentPropertyString;
+                [importString appendString:[NSString stringWithFormat:@"#import \"%@.h\" \n",currentModelName]];
+                
+            }
             [self createModelClassFileWithResource:obj andModelClassFileName:currentModelName andReplacedKeyFromPropertyName:replacedKeyFromPropertyName];
-            [importString appendString:[NSString stringWithFormat:@"#import \"%@.h\" \n",currentModelName]];
-
+            
             if (sInstance->_toolType == ModelToolTypeMJKit) {
             } else if (sInstance->_toolType == ModelToolTypeKVC) {
                 NSString *dictionaryPropertyAnalysisCodeString = [NSString stringWithFormat:@"else if ([key isEqualToString:@\"%@\"]) { \n %@ *%@ = [[%@ alloc] init]; \n [%@ setValuesForKeysWithDictionary:value]; \n_%@ = %@; \n}",key,currentModelName,key,currentModelName,key,key,key];
@@ -149,8 +201,33 @@ static TBModelTool *sInstance;
                 [AnalysisCodeString appendString:arrayPropertyAnalysisCodeString];
             }
         }
-        [codes appendFormat:@"\n%@\n", code];
+        if (code) {
+            [codes appendFormat:@"\n%@\n", code];
+        }
     }];
+    NSMutableArray *allPropertyArr = [[codes componentsSeparatedByString:@";"] mutableCopy];
+    if ([allPropertyArr.lastObject length] == 0) {
+        //[allPropertyArr removeLastObject];
+    }
+    NSMutableArray *tempPropertyArr = [NSMutableArray array];
+    for (NSString *property in allPropertyArr) {
+        
+        NSMutableString *replaceString = [NSMutableString string];
+        NSString *remarkCode = @"/**\n <\#Description\#>\n*/\n";
+        
+        [replaceString appendString:[[property stringByReplacingOccurrencesOfString:@"\n" withString:@""] stringByReplacingOccurrencesOfString:remarkCode  withString:@""]];
+        //        if (replaceString.length == 0) {
+        //            continue;
+        //        }
+        if (sInstance->_addRemarkCode) {
+            [replaceString insertString:remarkCode atIndex:0];
+            if (replaceString.length == remarkCode.length) {
+                replaceString = [@"" mutableCopy];
+            }
+        }
+        [tempPropertyArr addObject:replaceString];
+    }
+    codes = [[tempPropertyArr componentsJoinedByString:@";\n\n"] mutableCopy];
     if (sInstance->_toolType == ModelToolTypeMJKit) {
         if (propertyToModelDicStringArr.count > 0) {
             [AnalysisCodeString appendString:[NSString stringWithFormat:@"+ (NSDictionary *)mj_objectClassInArray { \nreturn @{%@};\n}",[propertyToModelDicStringArr componentsJoinedByString:@","]]];
@@ -166,12 +243,12 @@ static TBModelTool *sInstance;
                 [appendString appendFormat:@"@\"%@\":@\"%@\",",dic.allValues[i],dic.allKeys[i]];
             }
             [AnalysisCodeString appendString:[NSString stringWithFormat:@"+ (NSDictionary *)modelCustomPropertyMapper {\
-                                                 \nreturn @{%@\
-                                                 \n};\n \
-                                                 }",appendString]];
+                                              \nreturn @{%@\
+                                              \n};\n \
+                                              }",appendString]];
         }
     }
-
+    
     [self create_hFileWithImportString:importString andFileName:fileName andPropertyCodes:codes];
     [self create_mFileWithMethodString:AnalysisCodeString andFileName:fileName];
 }
@@ -181,32 +258,33 @@ static TBModelTool *sInstance;
     return sInstance->_replacedKey;
 }
 
-+ (void)setupReplacedKeyFromPropertyName:(NSDictionary *)replacedKeyFromPropertyName{
++ (void)modelToolSetupReplacedKeyFromPropertyName:(NSDictionary *)replacedKeyFromPropertyName{
     NSMutableDictionary *replacedKey = sInstance->_replacedKey;
     [replacedKey addEntriesFromDictionary:replacedKeyFromPropertyName];
     sInstance->_replacedKey = replacedKey;
 }
-+ (void)create_hFileWithImportString:(NSString *)importString andFileName:(NSString *)fileName andPropertyCodes:(NSString *)propertyCodes {
-    NSString *headerString = [NSString stringWithFormat:@"#import <Foundation/Foundation.h>\n%@@interface %@ : NSObject \n",importString,fileName];
++ (void)create_hFileWithImportString:(NSString *)importString andFileName:(NSString *)fileName andPropertyCodes:(NSString *)propertyCodes{
+    NSString *headerString = [NSString stringWithFormat:@"%@%@@interface %@ : NSObject \n",[importString containsString:@"#import <Foundation/Foundation.h>\n"]?@"":@"#import <Foundation/Foundation.h>\n",importString,fileName];
+    if ([propertyCodes containsString:headerString]) {
+        headerString = @"";
+    }
     NSString *hCodes = [NSString stringWithFormat:@"%@%@ \n@end",headerString,propertyCodes];
-    [hCodes writeToFile:[NSString stringWithFormat:@"%@%@.h",MODEL_FILE_PATH,fileName] atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    [hCodes writeToFile:[NSString stringWithFormat:@"%@%@.h",[MODEL_FILE_PATH hasSuffix:@"/"] ? MODEL_FILE_PATH : [NSString stringWithFormat:@"%@/",MODEL_FILE_PATH],fileName] atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 
 + (void)create_mFileWithMethodString:(NSString *)MethodString andFileName:(NSString *)fileName {
     NSString *mCodes = [NSString stringWithFormat:@"#import \"%@.h\"\n@implementation %@\n\n%@\n@end",fileName,fileName,MethodString];
-    [mCodes writeToFile:[NSString stringWithFormat:@"%@%@.m",MODEL_FILE_PATH,fileName] atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    [mCodes writeToFile:[NSString stringWithFormat:@"%@%@.m",[MODEL_FILE_PATH hasSuffix:@"/"] ? MODEL_FILE_PATH : [NSString stringWithFormat:@"%@/",MODEL_FILE_PATH],fileName] atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 
 + (BOOL)fileIsExistWithFileName:(NSString *)fileName {
     NSFileManager *manager = [NSFileManager defaultManager];
-    NSString *hFileName = [NSString stringWithFormat:@"%@%@.h",MODEL_FILE_PATH,fileName];
+    NSString *hFileName = [NSString stringWithFormat:@"%@%@.h",[MODEL_FILE_PATH hasSuffix:@"/"] ? MODEL_FILE_PATH : [NSString stringWithFormat:@"%@/",MODEL_FILE_PATH],fileName];
     if ([manager fileExistsAtPath:hFileName]) {
-        NSLog(@"%@.h 文件已经存在,请删除文件后再试!",fileName);
         return YES;
     }
-    NSString *mFileName = [NSString stringWithFormat:@"%@%@.m",MODEL_FILE_PATH,fileName];
+    NSString *mFileName = [NSString stringWithFormat:@"%@%@.m",[MODEL_FILE_PATH hasSuffix:@"/"] ? MODEL_FILE_PATH : [NSString stringWithFormat:@"%@/",MODEL_FILE_PATH],fileName];
     if ([manager fileExistsAtPath:mFileName]) {
-        NSLog(@"%@.m 文件已经存在,请删除文件后再试!",fileName);
         return YES;
     }
     return NO;

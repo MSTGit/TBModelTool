@@ -1,8 +1,7 @@
 #import <Foundation/Foundation.h>
-#import "TBMJKitCommonattachmentlistModel.h" 
-#import "TBMJKitDicttestModel.h" 
-@interface TBMJKitModel : NSObject 
-
+#import "TBKVCCommonattachmentlistModel.h" 
+#import "TBKVCDicttestModel.h" 
+@interface TBKVCModel : NSObject 
 @property (nonatomic, strong) NSString *usedBudget;
 
 @property (nonatomic, strong) NSString *amount;
@@ -45,7 +44,7 @@
 
 @property (nonatomic, strong) NSString *empId;
 
-@property (nonatomic, strong) TBMJKitDicttestModel *dictTest;
+@property (nonatomic, strong) TBKVCDicttestModel *dictTest;
 
 @property (nonatomic, strong) NSString *orderDate;
 
@@ -62,5 +61,6 @@
 @property (nonatomic, strong) NSString *remainingBudget;
 
 @property (nonatomic, strong) NSString *orderMonth;
+
  
 @end

@@ -30,18 +30,6 @@
 		67FEFB6D1E558268009E485F /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB5B1E558268009E485F /* NSObject+YYModel.m */; };
 		67FEFB6E1E558268009E485F /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB5D1E558268009E485F /* YYClassInfo.m */; };
 		67FEFB731E558306009E485F /* TBModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB721E558306009E485F /* TBModelTool.m */; };
-		67FEFB8C1E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB751E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.m */; };
-		67FEFB8D1E5583B2009E485F /* TBKVCCommonattachmentlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB771E5583B2009E485F /* TBKVCCommonattachmentlistModel.m */; };
-		67FEFB8E1E5583B2009E485F /* TBKVCDicttestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB791E5583B2009E485F /* TBKVCDicttestModel.m */; };
-		67FEFB8F1E5583B2009E485F /* TBKVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB7B1E5583B2009E485F /* TBKVCModel.m */; };
-		67FEFB901E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB7D1E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.m */; };
-		67FEFB911E5583B2009E485F /* TBMJKitCommonattachmentlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB7F1E5583B2009E485F /* TBMJKitCommonattachmentlistModel.m */; };
-		67FEFB921E5583B2009E485F /* TBMJKitDicttestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB811E5583B2009E485F /* TBMJKitDicttestModel.m */; };
-		67FEFB931E5583B2009E485F /* TBMJKitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB831E5583B2009E485F /* TBMJKitModel.m */; };
-		67FEFB941E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB851E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.m */; };
-		67FEFB951E5583B2009E485F /* TBYYCommonattachmentlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB871E5583B2009E485F /* TBYYCommonattachmentlistModel.m */; };
-		67FEFB961E5583B2009E485F /* TBYYDicttestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB891E5583B2009E485F /* TBYYDicttestModel.m */; };
-		67FEFB971E5583B2009E485F /* TBYYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFB8B1E5583B2009E485F /* TBYYModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,30 +95,6 @@
 		67FEFB5D1E558268009E485F /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
 		67FEFB711E558306009E485F /* TBModelTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBModelTool.h; sourceTree = "<group>"; };
 		67FEFB721E558306009E485F /* TBModelTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBModelTool.m; sourceTree = "<group>"; };
-		67FEFB741E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBKVCCommonattachmentlist_ArrModel.h; sourceTree = "<group>"; };
-		67FEFB751E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKVCCommonattachmentlist_ArrModel.m; sourceTree = "<group>"; };
-		67FEFB761E5583B2009E485F /* TBKVCCommonattachmentlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBKVCCommonattachmentlistModel.h; sourceTree = "<group>"; };
-		67FEFB771E5583B2009E485F /* TBKVCCommonattachmentlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKVCCommonattachmentlistModel.m; sourceTree = "<group>"; };
-		67FEFB781E5583B2009E485F /* TBKVCDicttestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBKVCDicttestModel.h; sourceTree = "<group>"; };
-		67FEFB791E5583B2009E485F /* TBKVCDicttestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKVCDicttestModel.m; sourceTree = "<group>"; };
-		67FEFB7A1E5583B2009E485F /* TBKVCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBKVCModel.h; sourceTree = "<group>"; };
-		67FEFB7B1E5583B2009E485F /* TBKVCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBKVCModel.m; sourceTree = "<group>"; };
-		67FEFB7C1E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMJKitCommonattachmentlist_ArrModel.h; sourceTree = "<group>"; };
-		67FEFB7D1E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMJKitCommonattachmentlist_ArrModel.m; sourceTree = "<group>"; };
-		67FEFB7E1E5583B2009E485F /* TBMJKitCommonattachmentlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMJKitCommonattachmentlistModel.h; sourceTree = "<group>"; };
-		67FEFB7F1E5583B2009E485F /* TBMJKitCommonattachmentlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMJKitCommonattachmentlistModel.m; sourceTree = "<group>"; };
-		67FEFB801E5583B2009E485F /* TBMJKitDicttestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMJKitDicttestModel.h; sourceTree = "<group>"; };
-		67FEFB811E5583B2009E485F /* TBMJKitDicttestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMJKitDicttestModel.m; sourceTree = "<group>"; };
-		67FEFB821E5583B2009E485F /* TBMJKitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMJKitModel.h; sourceTree = "<group>"; };
-		67FEFB831E5583B2009E485F /* TBMJKitModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMJKitModel.m; sourceTree = "<group>"; };
-		67FEFB841E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBYYCommonattachmentlist_ArrModel.h; sourceTree = "<group>"; };
-		67FEFB851E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBYYCommonattachmentlist_ArrModel.m; sourceTree = "<group>"; };
-		67FEFB861E5583B2009E485F /* TBYYCommonattachmentlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBYYCommonattachmentlistModel.h; sourceTree = "<group>"; };
-		67FEFB871E5583B2009E485F /* TBYYCommonattachmentlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBYYCommonattachmentlistModel.m; sourceTree = "<group>"; };
-		67FEFB881E5583B2009E485F /* TBYYDicttestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBYYDicttestModel.h; sourceTree = "<group>"; };
-		67FEFB891E5583B2009E485F /* TBYYDicttestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBYYDicttestModel.m; sourceTree = "<group>"; };
-		67FEFB8A1E5583B2009E485F /* TBYYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBYYModel.h; sourceTree = "<group>"; };
-		67FEFB8B1E5583B2009E485F /* TBYYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBYYModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,30 +145,6 @@
 		67FEFB0D1E558252009E485F /* TBModelTool */ = {
 			isa = PBXGroup;
 			children = (
-				67FEFB741E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.h */,
-				67FEFB751E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.m */,
-				67FEFB761E5583B2009E485F /* TBKVCCommonattachmentlistModel.h */,
-				67FEFB771E5583B2009E485F /* TBKVCCommonattachmentlistModel.m */,
-				67FEFB781E5583B2009E485F /* TBKVCDicttestModel.h */,
-				67FEFB791E5583B2009E485F /* TBKVCDicttestModel.m */,
-				67FEFB7A1E5583B2009E485F /* TBKVCModel.h */,
-				67FEFB7B1E5583B2009E485F /* TBKVCModel.m */,
-				67FEFB7C1E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.h */,
-				67FEFB7D1E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.m */,
-				67FEFB7E1E5583B2009E485F /* TBMJKitCommonattachmentlistModel.h */,
-				67FEFB7F1E5583B2009E485F /* TBMJKitCommonattachmentlistModel.m */,
-				67FEFB801E5583B2009E485F /* TBMJKitDicttestModel.h */,
-				67FEFB811E5583B2009E485F /* TBMJKitDicttestModel.m */,
-				67FEFB821E5583B2009E485F /* TBMJKitModel.h */,
-				67FEFB831E5583B2009E485F /* TBMJKitModel.m */,
-				67FEFB841E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.h */,
-				67FEFB851E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.m */,
-				67FEFB861E5583B2009E485F /* TBYYCommonattachmentlistModel.h */,
-				67FEFB871E5583B2009E485F /* TBYYCommonattachmentlistModel.m */,
-				67FEFB881E5583B2009E485F /* TBYYDicttestModel.h */,
-				67FEFB891E5583B2009E485F /* TBYYDicttestModel.m */,
-				67FEFB8A1E5583B2009E485F /* TBYYModel.h */,
-				67FEFB8B1E5583B2009E485F /* TBYYModel.m */,
 				67FEFB411E558268009E485F /* json.json */,
 				67FEFB701E558306009E485F /* TBModelTool */,
 				67FEFB421E558268009E485F /* MJExtension */,
@@ -436,16 +376,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				67FEFB681E558268009E485F /* NSObject+MJClass.m in Sources */,
-				67FEFB8E1E5583B2009E485F /* TBKVCDicttestModel.m in Sources */,
-				67FEFB921E5583B2009E485F /* TBMJKitDicttestModel.m in Sources */,
-				67FEFB971E5583B2009E485F /* TBYYModel.m in Sources */,
 				67FEFB631E558268009E485F /* MJExtensionConst.m in Sources */,
-				67FEFB961E5583B2009E485F /* TBYYDicttestModel.m in Sources */,
-				67FEFB8D1E5583B2009E485F /* TBKVCCommonattachmentlistModel.m in Sources */,
 				67FEFB671E558268009E485F /* MJPropertyType.m in Sources */,
-				67FEFB911E5583B2009E485F /* TBMJKitCommonattachmentlistModel.m in Sources */,
 				67FEFB661E558268009E485F /* MJPropertyKey.m in Sources */,
-				67FEFB941E5583B2009E485F /* TBYYCommonattachmentlist_ArrModel.m in Sources */,
 				67FEFB6A1E558268009E485F /* NSObject+MJKeyValue.m in Sources */,
 				67FEFB691E558268009E485F /* NSObject+MJCoding.m in Sources */,
 				67FEFB6C1E558268009E485F /* NSString+MJExtension.m in Sources */,
@@ -453,15 +386,10 @@
 				67FEFB6B1E558268009E485F /* NSObject+MJProperty.m in Sources */,
 				67FEFB6D1E558268009E485F /* NSObject+YYModel.m in Sources */,
 				67FEFB161E558252009E485F /* ViewController.m in Sources */,
-				67FEFB931E5583B2009E485F /* TBMJKitModel.m in Sources */,
-				67FEFB951E5583B2009E485F /* TBYYCommonattachmentlistModel.m in Sources */,
 				67FEFB131E558252009E485F /* AppDelegate.m in Sources */,
-				67FEFB8F1E5583B2009E485F /* TBKVCModel.m in Sources */,
-				67FEFB8C1E5583B2009E485F /* TBKVCCommonattachmentlist_ArrModel.m in Sources */,
 				67FEFB641E558268009E485F /* MJFoundation.m in Sources */,
 				67FEFB731E558306009E485F /* TBModelTool.m in Sources */,
 				67FEFB6E1E558268009E485F /* YYClassInfo.m in Sources */,
-				67FEFB901E5583B2009E485F /* TBMJKitCommonattachmentlist_ArrModel.m in Sources */,
 				67FEFB101E558252009E485F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,6 +626,7 @@
 				67FEFB3A1E558252009E485F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67FEFB3B1E558252009E485F /* Build configuration list for PBXNativeTarget "TBModelToolTests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +635,7 @@
 				67FEFB3D1E558252009E485F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67FEFB3E1E558252009E485F /* Build configuration list for PBXNativeTarget "TBModelToolUITests" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +644,7 @@
 				67FEFB401E558252009E485F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

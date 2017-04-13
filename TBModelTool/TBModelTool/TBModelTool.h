@@ -12,9 +12,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- 指定文件生成的位置     一般情况下,路径结尾应该包含 '/' 字符
+ 指定文件生成的位置
 */
-#define MODEL_FILE_PATH @"/Users/tangbin/Desktop/PropertyToModel/TBModelTool/TBModelTool/"
+#define MODEL_FILE_PATH @"/Users/ducktobey/Documents/GithubDemo/TBModelTool/TBModelTool"
 
 @interface TBModelTool : NSObject
 

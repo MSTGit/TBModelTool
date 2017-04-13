@@ -1,11 +1,10 @@
 #import <Foundation/Foundation.h>
-#import "TBYYCommonattachmentlistModel.h" 
-#import "TBYYDicttestModel.h" 
-@interface TBYYModel : NSObject 
-
+#import "TBMJKitCommonattachmentlistModel.h" 
+#import "TBMJKitDicttestModel.h" 
+@interface TBMJKitModel : NSObject 
 @property (nonatomic, strong) NSString *usedBudget;
 
-@property (nonatomic, strong) NSString *amountamountamountamount;
+@property (nonatomic, strong) NSString *amount;
 
 @property (nonatomic, assign) NSInteger NumberTest;
 
@@ -45,7 +44,7 @@
 
 @property (nonatomic, strong) NSString *empId;
 
-@property (nonatomic, strong) TBYYDicttestModel *dictTest;
+@property (nonatomic, strong) TBMJKitDicttestModel *dictTest;
 
 @property (nonatomic, strong) NSString *orderDate;
 
@@ -62,5 +61,6 @@
 @property (nonatomic, strong) NSString *remainingBudget;
 
 @property (nonatomic, strong) NSString *orderMonth;
+
  
 @end
