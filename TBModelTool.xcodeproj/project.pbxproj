@@ -146,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				67FEFB411E558268009E485F /* json.json */,
+				D96654831E9F571A00A908F8 /* ModelToolFiles */,
 				67FEFB701E558306009E485F /* TBModelTool */,
 				67FEFB421E558268009E485F /* MJExtension */,
 				67FEFB591E558268009E485F /* Model */,
@@ -235,6 +236,13 @@
 				67FEFB721E558306009E485F /* TBModelTool.m */,
 			);
 			path = TBModelTool;
+			sourceTree = "<group>";
+		};
+		D96654831E9F571A00A908F8 /* ModelToolFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelToolFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  指定文件生成的位置
 */
-#define MODEL_FILE_PATH @"/Users/ducktobey/Documents/GithubDemo/TBModelTool/TBModelTool"
+#define MODEL_FILE_PATH @"/Users/ducktobey/Documents/GithubDemo/TBModelTool/TBModelTool/ModelToolFiles"
 
 @interface TBModelTool : NSObject
 
