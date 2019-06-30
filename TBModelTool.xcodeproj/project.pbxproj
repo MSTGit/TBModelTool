@@ -312,7 +312,7 @@
 				TargetAttributes = {
 					67FEFB0A1E558252009E485F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2Q4XA4B6CU;
+						DevelopmentTeam = 676W74C3D4;
 						ProvisioningStyle = Automatic;
 					};
 					67FEFB231E558252009E485F = {
@@ -334,6 +334,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -545,10 +546,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2Q4XA4B6CU;
+				DEVELOPMENT_TEAM = 676W74C3D4;
 				INFOPLIST_FILE = TBModelTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Posun.TBModelTool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xd.666;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -557,10 +558,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2Q4XA4B6CU;
+				DEVELOPMENT_TEAM = 676W74C3D4;
 				INFOPLIST_FILE = TBModelTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Posun.TBModelTool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xd.666;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
