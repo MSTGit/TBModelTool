@@ -21,7 +21,7 @@ TBModelTool是一个简单的工具,可以帮助大家快速的根据 json 数�
 
  `   [TBModelTool YYModel_createModelClassFileWithResource:jsonData andModelClassFileName:@"Your Model Name" andReplacedKeyFromPropertyName:nil];`
 
-##**然后到指定的目录下 导入该文件到项目即可!至此,模型生成就完成了**
+## **然后到指定的目录下 导入该文件到项目即可!至此,模型生成就完成了**
 
  - ⚠️在使用中有需要注意的地方:
 
